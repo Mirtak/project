@@ -242,7 +242,6 @@ def draw_next_shape(shape, surface):
 
 def draw_window(surface):
     surface.fill((0, 0, 0))
-    # Tetris Title
     font = pygame.font.SysFont('comicsans', 60)
     label = font.render('TETRIS', 1, (255, 255, 255))
 
@@ -284,7 +283,6 @@ def main():
             if fall_speed > 0.15:
                 fall_speed -= 0.005
 
-        # PIECE FALLING CODE
         if fall_time / 1000 >= fall_speed:
             fall_time = 0
             current_piece.y += 1
